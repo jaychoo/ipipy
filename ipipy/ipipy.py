@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import logging
-import json
 import argparse
 
 import requests
@@ -19,10 +18,10 @@ def get_ip_address():
         return response.json()
     except TimeoutError as e:
         logging.debug(e)
-        return json.dumps({'message': 'Time Out'})
+        return {'message': 'Time Out'}
     except Exception as e:
         logging.exception(e)
-        return json.dumps({'message': 'Unknown Error'})
+        return {'message': 'Unknown Error'}
 
 
 class Ipipy(Resource):
