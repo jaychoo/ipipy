@@ -45,7 +45,7 @@ def main_web(port=8000, **kwargs):
     global app
 
     app = setup_web()
-    app.run(host='localhost', port=port, **kwargs)
+    app.run(host='0.0.0.0', port=port, **kwargs)
 
 
 def main():
